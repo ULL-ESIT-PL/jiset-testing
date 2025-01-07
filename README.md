@@ -8,6 +8,9 @@ Appears [ecmarkup](https://github.com/tc39/ecmarkup) is used to generate the HTM
 [emu-format](https://github.com/tc39/ecmarkup/blob/main/bin/emu-format.js) is used to format the HTML files.
 
 
+https://github.com/rbuckton/grammarkdown npm package to specify the grammar. `grammarkdown` is a markdown-style parser for syntactic grammars, designed to make it easily to rapidly prototype a grammar and statically verify its consistency.
+The grammar supported by `grammarkdown` is based on the parametric grammar used by ECMA-262 (the JavaScript language standard). See https://rbuckton.github.io/grammarkdown/
+
 ## Introduction to JISET (deprecated)
 
 ### What is JISET?
