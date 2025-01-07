@@ -1,10 +1,20 @@
-# Introduction to JISET
+#  Exploring the way TC39 proposals are checked
 
-## What is JISET?
+## Tools used 
+
+See the dependencies in https://github.com/tc39/ecma262/blob/main/package.json
+
+Appears [ecmarkup](https://github.com/tc39/ecmarkup) is used to generate the HTML files from the markdown files. 
+[emu-format](https://github.com/tc39/ecmarkup/blob/main/bin/emu-format.js) is used to format the HTML files.
+
+
+## Introduction to JISET (deprecated)
+
+### What is JISET?
 
 **JISET** stands for **JavaScript IR-based Semantics Extraction Toolchain**
 
-Thre is a warning in the README.md:
+There is a warning in the README.md:
 
 > **Warning** - This repository is no longer maintained. Instead, please use
 > [ESMeta](https://github.com/es-meta/esmeta), a rebranded version of JISET.
@@ -13,7 +23,7 @@ Thre is a warning in the README.md:
 **T**oolchain. It is the first tool that automatically synthesizes parsers and
 AST-IR translators directly from a given language specification, ECMAScript.
 
-### Publications
+#### Publications
 
 Details of the JISET framework are available in our papers:
 - [ASE 2020] [JISET: JavaScript IR-based Semantics Extraction
@@ -23,29 +33,29 @@ Details of the JISET framework are available in our papers:
 - [ASE 2021] [JSTAR: JavaScript Specification Type Analyzer using
   Refinement](https://ieeexplore.ieee.org/document/9678781)
 
-### Overall Structure
+#### Overall Structure
 
 ![image](https://user-images.githubusercontent.com/6766660/124231185-e91d3380-db4a-11eb-95b5-dc43f4341ff2.png)
 
-## Installation
+### Installation
 
-### Download JISET
+#### Download JISET
 ```bash
 $ git clone https://github.com/kaist-plrg/jiset.git
 ```
 
-### Errors during `sbt` execution
+#### Errors during `sbt` execution
 
 After many attempts of installing jiset, the errors persisted during `sbt` execution.
 So I donwladed a zip file from https://github.com/sbt/sbt/releases/download/v1.9.8/sbt-1.9.8.zip and it worked.
 
-### Setting up the environment
+#### Setting up the environment
 
 Set the environment variables in `.zshrc` as follows:
 
 ```
-# JISET JavaScript IR-based Semantics Extraction Toolchain
-# for JISET https://github.com/kaist-plrg/jiset
+## JISET JavaScript IR-based Semantics Extraction Toolchain
+## for JISET https://github.com/kaist-plrg/jiset
 export JISET_HOME=/Users/casianorodriguezleon/campus-virtual/2425/learning/compiler-learning/jiset # "<path to JISET>" 
 export PATH="$JISET_HOME/bin:$PATH" # for executables `jiset` and etc.
 source $JISET_HOME/jiset-auto-completion # for auto completion
@@ -58,7 +68,7 @@ and
 export PATH="$SBT_HOME/bin:$PATH" # for executables `sbt` and etc. 
 ```
 
-### Simple Examples
+#### Simple Examples
 
 Then 
 
@@ -138,6 +148,6 @@ The times are awful. The `debug` command produces a lot of output.  [A 763883 ch
    16737   61702  763883 debug.log.md
 ```
 
-## Basic Commands
+### Basic Commands
 
 See the output of [jiset help](jiset-help.md).
